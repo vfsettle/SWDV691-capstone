@@ -12,6 +12,53 @@ export class PantryDialogueService {
     console.log('Utilizing PantryDialogue Service');
   }
 
+  async warningPrompt(item?, index?) {
+    const alert = await this.alertController.create({
+      // cssClass: 'my-custom-class',
+      header: item? 'Delete Item' : 'Cancel Action',
+      // subHeader: 'Subtitle',
+      message: item? 'Confirm Delete' : 'Exit',
+      inputs: [
+        {
+          name: 'name',
+          placeholder: 'Item',
+          value: item? item.name : null
+        },
+        {
+          name: 'qty',
+          placeholder: 'Quantity',
+          value: item? item.qty : null
+        },
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          // role: 'cancel',
+          // cssClass: 'secondary',
+          handler: (item) => {
+            console.log('Cancel item delete');
+            this.dataSvc.editItem(item, index);
+          }
+        }, 
+        {
+          text: 'Delete',
+          handler: (item) => {
+            console.log('Delete', item);
+            if (index!== undefined) {
+            this.dataSvc.removeItem(item);
+          }
+          else {
+            this.dataSvc.editItem(item, index);
+          }
+
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
+
   async showPrompt(item?, index?) {
     const alert = await this.alertController.create({
       // cssClass: 'my-custom-class',

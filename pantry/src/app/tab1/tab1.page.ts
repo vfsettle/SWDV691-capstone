@@ -29,6 +29,7 @@ export class Tab1Page {
       });
       toast.present();
 
+      this.inputSvc.warningPrompt(item, index);
       this.dataSvc.removeItem(index);
     }
 
