@@ -1,0 +1,7 @@
+# SWDV691-capstone
+# Application Definition
+The  “What’s in My Pantry?” app is a productivity application which offers a way for users to avoid the inconvenience of stocking out of important items and helps reduce expenses of overbuying duplicate or excess items. The app will help users track “inventory” of household items easily forgotten because they are stored “out of sight”. For example, Items stored in the deeper reaches of a freezer, pantry shelf, or garage, tend to be harder to recall from memory as time moves further from the date of purchase or storage. 
+# Value Proposition
+Helping users save money on groceries and household supplies by reducing unused perishable items and overbuying items already in supply but lost in memory. It also aims to help users prevent the inconvenience of running out of essential items before the next planned shopping run. 
+# Application Usage
+With the “What’s in My Pantry” app, users create their starting inventory by logging their locations, items, quantities and expiry dates, if applicable. Users will be able to create new items, define locations, and  add/decrement the items in inventory, and create/delete items. It will offer a native device feature, starting with the option to use the Camera to take a photo of the storage location.  In future releases, the app will allow users to set alerts or reminders to “Go Shopping Soon” if inventory falls to a specified quantity or date.  
