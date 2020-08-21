@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
-import { PantryDataService } from '../service/pantry-data.service';
-import { PantryDialogueService } from '../service/pantry-dialogue.service';
+import { PantryDataService } from '../pantry-data.service';
+import { PantryDialogueService } from '.././pantry-dialogue.service';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 
