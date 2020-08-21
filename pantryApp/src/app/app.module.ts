@@ -10,8 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 // Ionic App Service Layers
-import { PantryDataService } from './pantry-data.service';
-import { PantryDialogueService } from './pantry-dialogue.service';
+import { PantryDataService } from './service/pantry-data.service';
+import { PantryDialogueService } from './service/pantry-dialogue.service';
 
 // Cordova Services
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
