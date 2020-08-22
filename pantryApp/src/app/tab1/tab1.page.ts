@@ -16,11 +16,33 @@ export class Tab1Page {
 
   title = "What's In My Pantry?";
 
-  constructor(public navCtrl: NavController, public toastController: ToastController, public alertController: AlertController, public dataSvc: PantryDataService, public inputSvc: PantryDialogueService, public socialShare: SocialSharing, public camera: Camera) {}
-
-  loadItems() {
-    return this.dataSvc.getItems();
+  items: any = [];
+  errorMessage: string;
+  
+  constructor(
+    public navCtrl: NavController, 
+    public toastController: ToastController, 
+    public alertController: AlertController, 
+    public dataSvc: PantryDataService, 
+    public inputSvc: PantryDialogueService, 
+    public socialShare: SocialSharing, 
+    public camera: Camera) 
+  {
+    dataSvc.dataChanged$.subscribe((dataChanged: boolean) => {
+        this.loadItems();
+      });
   }
+
+  ionViewDidLoad() {
+    this.loadItems();
+  }
+    
+  loadItems() {
+    this.dataSvc.getItems()
+      .subscribe(
+        items => this.items = items,
+        error => this.errorMessage = <any>error);
+      }
   
   addItem() {
     console.log("Adding Item");
@@ -61,6 +83,7 @@ export class Tab1Page {
     // Check if sharing via email is supported
     let message = "Pantry Item: " + item.name + " " + "Quantity: " + item.qty;
     let subject = "Item Shared via What's In My Pantry App";
+
     this.socialShare.share().then(() => {
       // Sharing via email is possible
       console.log("Shared successfully!");

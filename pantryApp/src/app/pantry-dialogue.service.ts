@@ -102,21 +102,25 @@ export class PantryDialogueService {
           text: 'Cancel',
           // role: 'cancel',
           // cssClass: 'secondary',
-          handler: (item) => {
-            console.log('Cancel item entry');
+          handler: data => {
+            console.log('Cancel clicked');
           }
         }, 
+        
         {
           text: 'Save',
-          handler: (item) => {
-            console.log('Save', item);
+          handler: data => {
+            console.log('Save Handler', data);
             if (index!== undefined) {
-            this.dataSvc.editItem(item, index);
-          }
-          else {
-            this.dataSvc.addItem(item);
-          }
-
+              item.name = data.name;
+              item.qty = data.qty;
+              item.expiry = data.expiry;
+              item.location = data.location;
+              this.dataSvc.editItem(item, index);
+            }
+            else {
+            this.dataSvc.addItem(data);
+            }
           }
         }
       ]
