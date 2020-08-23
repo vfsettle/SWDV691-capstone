@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Blog Yummy Delicious</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Yummy Delicious Recipes and Videos, Easy and Healthy Meals Made at Home">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styling.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/mustache.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+
+</head>
+
+<body>
+    <div class="container" id="navhead">
+        <div class="row">
+           <!-- nav links -->
+           <div class="row">
+            <!-- nav links -->
+                <div class="col-sm-12"  id="topNav">
+                    <img id="logoIcon" src="jpg/YDLogoShort.jpg" alt="Yummy Delicious Logo">
+                    <br>
+                    <ul class="list-group">
+                        </li> 
+                        <li class="list-group-item" id="recipes">
+                            <a href="index.html">RECIPES</a>
+                        </li>
+                        <li class="list-group-item" id="shop">
+                            <a href="shop.html">SHOP</a>
+                        </li>
+                        <li class="list-group-item" id= "login">
+                            <a href="login.html">LOGIN</a>
+                        </li>
+                        <li class="list-group-item" id= "about">
+                            <a href="about.html">ABOUT</a>
+                        </li>
+                        </li>
+                        <li class="list-group-item" id= "blog">
+                            <a href="blog.html">BLOG</a>
+                        </li>                    
+                    </ul>
+
+                </div>
+            </div>
+           <!-- END nav links -->
+        </div>
+    </div>    
+    <div class="container" id="search">
+        <div class= "row">
+                <!-- search input field -->
+                <div class="col-sm-12"  >
+                    <form id="searchIn">
+                        <label for="searchIn" class="inputLabel"><p></p>
+                            <img id="logoText" src="jpg/YDLogoText.jpg" alt="Yummy Delicious Logo as Text">
+                        </label>
+                        <input type="input" id="name" class="inputField" value="search">
+                        <button id="b2"><a href="http://www.google.com/search?q=recipes">Explore</a></button>
+                    </form>
+
+                    </div>
+        </div>
+    </div>
+    <!-- END search input field -->
+    <!-- Articles -->
+    <div class="container" id="articles">
+        <div id="target">    
+            <script id="template" type="x-tmpl-mustache">
+                <h2> Welcome Back {{person.name}}! </h2> <br> 
+                <p>We love that you're an <strong>{{person.type}}</strong> and share a passion for <strong>{{person.quote}}</strong> . <br>
+                Here are a few receipes trending now for like minded foodies near your hometown of <strong>{{person.home}}</strong>. <br>
+                Bon Apetit!<br></p>
+            </script>
+        </div>
+        <div class="col" >
+            <div class="col-sm-3" id="art1"><h3>Pantry Pun!</h3>
+                <button id="b4"><a href="index.html">Get Recipes</a></button>
+            </div>
+            <div class="col-sm-3" id="art2"><h3>Land & Sea</h3>
+                <button id="b4"><a href="index.html">Get Recipes</a></button>
+            </div>
+            <div class="col-sm-3" id="art3"><h3>Vegetarian</h3>
+                <button id="b4"><a href="index.html">Get Recipes</a></button>
+            </div>
+            <div class="col-sm-3" id="art4"><h3>Sweet Tooth</h3>
+                <button id="b4"><a href="index.html">Get Recipe</a></button>
+            </div>
+        </div>
+    <!-- END Articles -->
+
+    </div>
+    <br>
+</body>
+<footer>
+    <!-- Navigation Bar -->
+    <div class="container" id="navfoot">
+        <div class="row">
+           <!-- nav links -->
+           <div class="col-sm-12"  id="bottomNav">
+               <ul class="list-group">
+                    </li> 
+                   <li class="list-group-item" id="recipes">
+                       <a href="index.html">RECIPES</a>
+                   </li>
+                   <li class="list-group-item" id="shop">
+                       <a href="shop.html">SHOP</a>
+                   </li>
+                   <li class="list-group-item" id= "login">
+                       <a href="login.html">LOGIN</a>
+                   </li>
+                   <li class="list-group-item" id= "about">
+                       <a href="about.html">ABOUT</a>
+                   </li>
+                   </li>
+                   <li class="list-group-item" id= "blog">
+                       <a href="blog.html">BLOG</a>
+                   </li>                    
+               </ul>
+               <img id="logo" src="jpg/YDLogoFull.jpg" alt="Yummy Delicious Logo">
+           </div>
+           <!-- END nav links -->
+    </footer>
+
+</html>
